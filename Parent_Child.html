@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <p>Hakan</p>
+        <p>Yılmaz</p>
+        <p>İclal İrem</p>
+        <p>Kocakurt</p>
+    </section>
+
+</body>
+<script>
+    const section = document.querySelector('section')
+
+    console.log(section.children)
+    console.log(Array.from(section.children))
+
+    Array.from(section.children).forEach(children => {
+        children.classList.add('child')
+    })
+
+    console.log(section.parentElement)
+    console.log(section.nextElementSibling)
+    console.log(section.previousSibling)
+
+    
+</script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="Form" action="">
+        <label for="Username">DOM</label>
+        <input type="text" name="Username" id="Username">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    const form = document.querySelector('.Form')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault() // Form işlemi gönderildikten sonra sayfanın yenilenmesine engel olur.
+        console.log('Form Gönderildi.')
+        console.log(form.Username.value) // Form un içinden direkt name ile çekebiliyoruz.
+    })
+</script>
+</html>

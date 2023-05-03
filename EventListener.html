@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style-type: none;
+            max-width: 200px;
+            padding: 8px;
+            margin: 8px auto;
+            background-color: aliceblue;
+            border: 1px dashed aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <h1 id="Hakan">DOM</h1>
+    </div>
+    <ul>
+        <li>Hakan</li>
+        <li>Yılmaz</li>
+        <li>İclal irem</li>
+        <li>Kocakurt</li>
+    </ul>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <button style="width: 80px; background-color: orange;
+         color: white; cursor: pointer;">Add</button>
+    </div>
+</body>
+<script>
+    const buton = document.querySelector('button')
+
+    const ul = document.querySelector('ul')
+    /* ul.remove() */
+
+    const liElements = document.querySelectorAll('li')
+
+    liElements.forEach(elements => {
+        elements.addEventListener('click', a => {
+            a.target.remove()
+            console.log('Elements Active!')
+        })
+    })
+
+    buton.addEventListener('click', e => {
+        console.log(e.target)
+        console.log('hi')
+
+        const li = document.createElement('li')
+        li.textContent = "Iclalim"
+
+        /* ul.append(li) //append sonuna ekliyor */
+        ul.prepend(li) //başına ekliyor
+    })
+
+</script>
+
+</html>

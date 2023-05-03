@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 2pc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            padding: .3pc;
+            margin: .2pc;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="Form" action="">
+        <label for="Username">Hakan Yaz</label>
+        <input type="text" name="Username" id="Username" style="outline: none;">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    const form = document.querySelector('.Form')
+    form.Username.addEventListener('keyup', e => {
+        if (form.Username.value == 'Hakan' || form.Username.value == 'hakan') {
+            form.Username.style.border = '2px solid green'
+        }
+        else {
+            form.Username.style.border = '2px solid red'
+
+        }
+    })
+</script>
+
+</html>
